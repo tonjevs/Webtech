@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="Organisations_Register">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Places" minOccurs="0" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Avalable_Services" minOccurs="0" maxOccurs="unbounded" >
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Service" type="xsd:string" />
+                    <xsd:element name="Days" type="xsd:string" />
+                    <xsd:element name="Cost" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

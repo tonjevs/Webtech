@@ -1,0 +1,64 @@
+<html>
+    <head>
+        Multiplier: 
+        <input type="text" id="number">
+        <br>
+        <title>A2 - Task 1</title>
+        <button onClick="startCounter()">
+        Start
+        </button>
+        <button onClick="stopCounter()">
+            Stop
+        </button>
+        <br>
+
+        <span id="display"></span>
+
+        <script>
+            const list = ['&#128512;', '&#128516;', '&#128525;', '&#128151;', "&#128507;", "&#x1F47B;", "&#x1F47D;", "&#x1F648;","&#129312;","&#128578;"];
+            var counter = 0;
+            var counterTime;
+            var number;
+            var sentence = [];
+
+            function startCounter(){
+                var display = document.getElementById("display");
+                display.innerHTML = "";
+                number = Math.floor(Math.random() * 100);
+                counterTime = setInterval(run, 1500);
+            }
+
+            function stopCounter(){
+                clearInterval(counterTime);
+                var textField = document.getElementById("number");
+                textField.value = "";
+
+            }
+            function run(){
+                showCounter();
+                var text = document.getElementById("display");
+                text.innerHTML =  text.innerHTML + "<br>" + sentence[counter];
+                counter++;
+                text.innerHTML
+
+            }
+
+            function showCounter(){
+
+                var text = document.getElementById("display");
+                var multiplier = document.getElementById("number");
+                var outputNumber = multiplier.value;
+                var finalNumber = number * outputNumber
+                var number_1 = Math.floor(Math.random() * 10);
+                var number_2 = Math.floor(Math.random() * 10);
+                sentence[counter] = list[number_1] + number + " * " + outputNumber + " = " + finalNumber + list[number_2]; 
+                number = finalNumber;
+                return;
+            }
+        </script>
+
+    </head>
+
+    <body>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+
+    <head>
+        <title>A2 - Task 1</title>
+
+        <button onclick="multiply();">
+            Multiply by 10
+        </button>
+
+        <button onclick="divide();">
+            Divide by 10
+        </button>
+
+        <button onclick="generateRandomNumber();">
+            Reset Number
+        </button> <br>
+
+        <input type="text" id="text"> <br>
+
+        <span id="display" style="color: blue;"></span>
+
+        <script>
+            function multiply(){
+                var number = document.getElementById("display");
+                var text = document.getElementById("text");
+                outputText = text.value
+                var outputNumber = number.value * 10;
+                number.value = outputNumber;
+                number.innerHTML = outputText + " " + outputNumber;
+            }
+
+            function divide(){
+                var number = document.getElementById("display");
+                var text = document.getElementById("text");
+                outputText = text.value
+                var outputNumber = Math.round(number.value / 10);
+                number.value = outputNumber;
+                number.innerHTML = outputText + " " + outputNumber;
+            }
+            
+            function generateRandomNumber(){
+                var number = document.getElementById("display");
+                var textField = document.getElementById("text")
+                textField.value = null;
+                number.value = Math.floor(Math.random()*(999-100+1)+100);
+                number.innerHTML = Math.floor(number.value);
+            }
+
+        </script>
+    </head>
+
+    <body onload="generateRandomNumber();">
+    </body>
+
+</html>

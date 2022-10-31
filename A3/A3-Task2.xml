@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Organisations_Register [
+    <!ELEMENT Organisations_Register (Places*)>
+    <!ATTLIST Organisations_Register currentDate CDATA #REQUIRED>
+    <!ELEMENT Places (Avalable_Services*)>
+    <!ATTLIST Places name CDATA #REQUIRED>
+    <!ELEMENT Avalable_Services (Service,Days,Cost)>
+    <!ELEMENT Service (#PCDATA)>
+    <!ELEMENT Days (#PCDATA)>
+    <!ELEMENT Cost (#PCDATA)>
+]>
+
+<Organisations_Register currentDate="09/09/2022">
+    <Places name="NGO_Free_Spirit">
+        <Avalable_Services>
+            <Service>Parents workshops</Service>
+            <Days>Thursdays</Days>
+            <Cost>$10</Cost>
+        </Avalable_Services>
+        <Avalable_Services>
+            <Service>Children playgroups</Service>
+            <Days>Friday</Days>
+            <Cost>$5</Cost>
+        </Avalable_Services>
+        <Avalable_Services>
+            <Service>Youth COunselling</Service>
+            <Days>Wednesday, Friday</Days>
+            <Cost>Free</Cost>
+        </Avalable_Services>
+    </Places>
+
+    <Places name="Southern_friends">
+        <Avalable_Services>
+            <Service>Visual art</Service>
+            <Days>Monday</Days>
+            <Cost>Free</Cost>
+        </Avalable_Services>
+        <Avalable_Services>
+            <Service>Singing together</Service>
+            <Days>Tuesday</Days>
+            <Cost>$15</Cost>
+        </Avalable_Services>
+        <Avalable_Services>
+            <Service>My music workshop</Service>
+            <Days>Tuesday, Wednesday</Days>
+            <Cost>$20</Cost>
+        </Avalable_Services>
+    </Places>
+
+    <Places name="Neighbourhood_Clinic">
+        <Avalable_Services>
+            <Service>Health Check</Service>
+            <Days>Thursday</Days>
+            <Cost>$10</Cost>
+        </Avalable_Services>
+        <Avalable_Services>
+            <Service>Blood test</Service>
+            <Days>Thursday</Days>
+            <Cost>$12</Cost>
+        </Avalable_Services>
+    </Places>
+</Organisations_Register>

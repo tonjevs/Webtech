@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <script>
+            function makeAJAXQuery(){
+                
+                var xhttp = new XMLHttpRequest();
+
+                xhttp.onreadystatechange = function(){
+                    readyStateChangeHandler(xhttp);
+                }
+                var queryUrl = "A4-Task1.json";
+                xhttp.open("GET", queryUrl, true);
+                xhttp.send();
+            }
+
+            function readyStateChangeHandler(xhttp){
+                if(xhttp.readyState == XMLHttpRequest.DONE){
+                    if(xhttp.status == 200){
+                        handleStatusSuccess(xhttp);
+                    }
+                    else{
+                        handleStatusFaliure(xhttp);
+                    }
+                }
+            }
+
+            function handleStatusFaliure(xhttp){
+                var displayDiv = document.getElementById("text");
+                displayDiv.innerHTML = "XMLHttpRequest failed: status " + xhttp.status;
+            }
+
+            function handleStatusSuccess(xhttp){
+                var jsonText = xhttp.responseText;
+                var obj = JSON.parse(jsonText);
+                display(obj);
+            }
+
+            function display(obj){
+                var html = "<h3><b> Organisations Register </b></h3>";
+                html += "<i>list is updated as of: " + obj.currentDate + "</i>";
+                for(var i = 0; i < obj.organisations.length; i++){
+                    html += "<hr />";
+                    html +=  "<br />";
+                    html +=  "for the organisation <u><b>" + obj.organisations[i].name + "</b></u>, located at: <i>" + obj.organisations[i].address + "</i> currently available services are:";
+                    html +=  "<br /><ol>";
+                    for(var j = 0; j < obj.organisations[i].availableServices.length; j++){
+                        console.log("her?");
+                        html += "<li> on " + obj.organisations[i].availableServices[j].days + " --> <b>" +  obj.organisations[i].availableServices[j].service + "</b>, cost: " + obj.organisations[i].availableServices[j].cost + "</li>";
+                    }
+                    html += "</ol>";
+                }
+                html += "<hr />";
+                var displayDiv = document.getElementById("text");
+                displayDiv.innerHTML = html;
+            }
+        </script>
+    </head>
+
+    <body>
+        <title>A4-Task2</title>
+
+        <button onClick="makeAJAXQuery()">
+            Read JSON
+        </button>
+
+        <br /><br />
+
+        <div id="text"> 
+        </div>
+    </body>
+</html>

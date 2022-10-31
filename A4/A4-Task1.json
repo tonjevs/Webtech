@@ -1,0 +1,70 @@
+{
+    "currentDate": "20/09/2022",
+    "organisations" :[
+        {
+            "availableServices": [
+                {
+                    "service": "Parents workshops",
+                    "days": "Thursday",
+                    "cost": "$10"
+                },
+
+                {
+                    "service": "Children playgroups",
+                    "days": "Friday",
+                    "cost": "$5"
+                },
+
+                {
+                    "service": "Youth counselling",
+                    "days": "Wednesday, Friday",
+                    "cost": "Free"
+                }
+            ],
+
+            "name": "NGO Free Spirit",
+            "address": "89 Crown Street, Wollongong"
+        },
+
+        {
+            "availableServices": [
+                {
+                    "service": "Visual art",
+                    "days": "Monday",
+                    "cost": "free"
+                },
+
+                {
+                    "service": "Singing together",
+                    "days": "Tuesday",
+                    "cost": "$15"
+                },
+
+                {
+                    "service": "My music workshop",
+                    "days": "Tuesday, Wednesday",
+                    "cost": "$20"
+                }
+            ],
+            "name": "Southern friends",
+            "address": "123 Baan St, Dapto"
+        },  
+        {
+            "availableServices": [
+                {
+                    "service": "Health check",
+                    "days": "Thursday",
+                    "cost": "$10"
+                },
+
+                {
+                    "service": "Blood test",
+                    "days": "Thursday",
+                    "cost": "$12"
+                }
+            ],
+            "name": "Neighbourhood clinic",
+            "address": "5/56 Elizabeth Ave, Liverpool"
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>A2 - Task 3</title>
+        <style>
+            #tables{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin-left: auto;
+                margin-right: auto;
+                border: 1;
+                border-style: solid;
+                border-width: 3px;
+                border-color: black;
+                border-collapse: collapse;
+                background-color: rgb(255, 170, 183);
+                font-weight: 100;
+            }
+        </style>
+    </head>
+    <body style="background-color: rgb(249, 226, 230);">
+        <form action="http://myAppo.com.au/query" method="get">
+            <table border="1" id="tables">
+                <tr style="background-color: rgb(234, 111, 131);">
+                    <td colspan="2" style="text-align: center;">
+                        My Appointments: 
+                    </td>
+                </tr>
+                <tr>
+                    <th>Dentist:</th>
+                    <th style="text-align: left;">
+                        <input type="radio" name="dentist" value="woll"/>Best Wollongong <br>
+                        <input type="radio" name="dentist" value="liv"/>Perfect Smile Liverpool <br>
+                        <input type="radio" name="dentist" value="shell"/>One Dentist Shellharbour <br/>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Name:</th>
+                    <th>
+                        <input type="text" name="name" style="width: 100%;"/>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>Phone:</th>
+                    <th>
+                        <input type="text" name="phone" style="width: 100%;"/>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>Email:</th>
+                    <th>
+                        <input type="text" name="email" style="width: 100%;"/>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>Time:</th>
+                    <th>
+                        <select name="time">
+                            <option value="1">9-10am</option>
+                            <option value="2">10-11am</option>
+                            <option value="3">12-1pm</option>
+                            <option value="4">1-2pm</option>
+                            <option value="5">2-3pm</option>
+                        </select>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>Note:</th>
+                    <th><textarea name="note" cols="25" rows="7"></textarea></th>
+                </tr>
+
+                <tr>
+                    <th>Reminders:</th>
+                    <th>
+                        <input type="checkbox" name="reminder" value="SMS"/> SMS
+                        <input type="checkbox" name="reminder" value="EM"/> Email        
+                    </th>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: right;">
+                        <input type="submit" value="Submit"/>
+                        <input type="reset" value="Reset"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
